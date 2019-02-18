@@ -1,0 +1,18 @@
+<h2><%= @question %></h2>
+<h3>-You</h3>
+
+<h2><%=
+if @question == "I am going to work"
+    answer = "Great!"
+elsif @question[-1] == "?"
+  answer = "Silly question, get dressed and go to work!"
+else
+  answer = "I don't care, get dressed and go to work!"
+end
+answer
+%></h2>
+<h3>-Coach</h3>
+
+<%= link_to "Ask another question", controller: "questions", action: "ask" %>
+
+<!-- <a href="/ask">Ask another question</a> -->
